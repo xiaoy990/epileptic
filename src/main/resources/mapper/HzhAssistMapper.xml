@@ -352,4 +352,46 @@
       child_id = #{childId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="multiSelect" resultMap="BaseResultMap">
+    select * from hzh_assist where 1=1
+    <if test="hzh_assist.pic != null">
+      pic = #{hzh_assist.pic,jdbcType=VARCHAR}
+    </if>
+    <if test="hzh_assist.headpic != null">
+      headpic = #{hzh_assist.headpic,jdbcType=VARCHAR}
+    </if>
+    <if test="hzh_assist.headmri != null">
+      headmri = #{hzh_assist.headmri,jdbcType=VARCHAR}
+    </if>
+    <if test="hzh_assist.headmrireason != null">
+      headmrireason = #{hzh_assist.headmrireason,jdbcType=VARCHAR}
+    </if>
+    <if test="hzh_assist.intell != null">
+      intell = #{hzh_assist.intell,jdbcType=VARCHAR}
+    </if>
+    <if test="hzh_assist.colorbody != null">
+      colorbody = #{hzh_assist.colorbody,jdbcType=VARCHAR}
+    </if>
+    <if test="hzh_assist.bloodwater != null">
+      bloodwater = #{hzh_assist.bloodwater,jdbcType=VARCHAR}
+    </if>
+    <if test="hzh_assist.check != null">
+      `check` = #{hzh_assist.check,jdbcType=VARCHAR}
+    </if>
+    <if test="hzh_assist.supersession != null">
+      supersession = #{hzh_assist.supersession,jdbcType=VARCHAR}
+    </if>
+    <if test="hzh_assist.ssreason != null">
+      ssreason = #{hzh_assist.ssreason,jdbcType=VARCHAR}
+    </if>
+    <if test="hzh_assist.other != null">
+      other = #{hzh_assist.other,jdbcType=VARCHAR}
+    </if>
+    <if test="hzh_assist.otherreason != null">
+      otherreason = #{hzh_assist.otherreason,jdbcType=VARCHAR}
+    </if>
+    <if test="hzh_assist.childId != null">
+      child_id = #{hzh_assist.childId,jdbcType=INTEGER}
+    </if>
+  </select>
 </mapper>

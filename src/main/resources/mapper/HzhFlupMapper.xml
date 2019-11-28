@@ -195,4 +195,17 @@
       child_id = #{childId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="multiSelect" resultMap="BaseResultMap">
+    select * from hzh_flup where 1 = 1
+    <if test="pic != null">
+      and pic = #{pic,jdbcType=VARCHAR}
+    </if>
+    <if test="content != null">
+      and content = #{content,jdbcType=VARCHAR}
+    </if>
+    <if test="childId != null">
+      and child_id = #{childId,jdbcType=INTEGER}
+    </if>
+  </select>
 </mapper>

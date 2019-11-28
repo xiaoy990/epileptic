@@ -791,7 +791,7 @@
             and birthday = #{birthday,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.age != null">
-            and age = #{age,jdbcType=INTEGER}
+            and age = #{hzhGeneral.age,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.province != null">
             and province = #{province,jdbcType=VARCHAR}
