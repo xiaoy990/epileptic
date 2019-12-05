@@ -7,6 +7,14 @@
     <result column="content" jdbcType="VARCHAR" property="content" />
     <result column="child_id" jdbcType="INTEGER" property="childId" />
   </resultMap>
+  <resultMap id="multiSelectResultMap" type="com.join.epileptic.entity.hzhDiagnose.HzhDiagnoseDto">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="remake" jdbcType="VARCHAR" property="remake" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="child_id" jdbcType="INTEGER" property="childId" />
+    <result column="name" property="name"/>
+    <result column="sicknum" property="sicknum"/>
+  </resultMap>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -195,4 +203,19 @@
       child_id = #{childId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="multiSelect" resultMap="multiSelectResultMap">
+    select * from hzh_diagnose d left join hzh_general g on (d.child_id = g.id) where 1 = 1
+    <if test="hzhGeneral.name != null and hzhGeneral.name != ''">
+      and g.name like concat('%','${hzhGeneral.name}','%')
+    </if>
+    <if test="hzhDiagnose.remake != null">
+      and remake = #{hzhDiagnose.remake,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhDiagnose.content != null">
+      and content = #{hzhDiagnose.content,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhDiagnose.childId != null">
+      and child_id = #{hzhDiagnose.childId,jdbcType=INTEGER}
+    </if>
+  </select>
 </mapper>

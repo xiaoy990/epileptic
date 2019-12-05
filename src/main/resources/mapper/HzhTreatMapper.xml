@@ -14,6 +14,21 @@
     <result column="firstdate" jdbcType="VARCHAR" property="firstdate" />
     <result column="child_id" jdbcType="INTEGER" property="childId" />
   </resultMap>
+  <resultMap id="multiSelectResultMap" type="com.join.epileptic.entity.hzhTreat.HzhTreatDto">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="firstdrug" jdbcType="VARCHAR" property="firstdrug" />
+    <result column="firstdrugreason" jdbcType="VARCHAR" property="firstdrugreason" />
+    <result column="anddrug" jdbcType="VARCHAR" property="anddrug" />
+    <result column="anddrugreason" jdbcType="VARCHAR" property="anddrugreason" />
+    <result column="othertreat" jdbcType="VARCHAR" property="othertreat" />
+    <result column="treatreason" jdbcType="VARCHAR" property="treatreason" />
+    <result column="firsttime" jdbcType="VARCHAR" property="firsttime" />
+    <result column="treatreturn" jdbcType="VARCHAR" property="treatreturn" />
+    <result column="firstdate" jdbcType="VARCHAR" property="firstdate" />
+    <result column="child_id" jdbcType="INTEGER" property="childId" />
+    <result column="name" property="name"/>
+    <result column="sicknum" property="sicknum"/>
+  </resultMap>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -305,4 +320,41 @@
       child_id = #{childId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="multiSelect" resultMap="multiSelectResultMap">
+    select * from hzh_treat t left join hzh_general g on(t.child_id = g.id) where 1 = 1
+    <if test="hzhGeneral.name != null and hzhGeneral.name != ''">
+      and g.name like concat('%','${hzhGeneral.name}','%')
+    </if>
+    <if test="hzhTreat.firstdrug != null">
+      and firstdrug = #{hzhTreat.firstdrug,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhTreat.firstdrugreason != null">
+      and firstdrugreason = #{hzhTreat.firstdrugreason,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhTreat.anddrug != null">
+      and anddrug = #{hzhTreat.anddrug,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhTreat.anddrugreason != null">
+      and anddrugreason = #{hzhTreat.anddrugreason,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhTreat.othertreat != null">
+      and othertreat = #{hzhTreat.othertreat,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhTreat.treatreason != null">
+      and treatreason = #{hzhTreat.treatreason,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhTreat.firsttime != null">
+      and firsttime = #{hzhTreat.firsttime,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhTreat.treatreturn != null">
+      and treatreturn = #{hzhTreat.treatreturn,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhTreat.firstdate != null">
+      and firstdate = #{hzhTreat.firstdate,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhTreat.childId != null">
+      and child_id = #{hzhTreat.childId,jdbcType=INTEGER}
+    </if>
+  </select>
 </mapper>
