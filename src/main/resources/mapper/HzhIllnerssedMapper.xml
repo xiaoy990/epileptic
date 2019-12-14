@@ -541,4 +541,82 @@
       hotherfirstgo = #{hotherfirstgo,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="multiSelect" resultMap="BaseResultMap">
+    select * from hzh_illnerssed where 1=1
+    <if test="hzhIllnerssed.tell != null">
+      and tell = #{hzhIllnerssed.tell,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.first != null">
+      and `first` = #{hzhIllnerssed.first,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.symptom != null">
+      and symptom = #{hzhIllnerssed.symptom,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.status != null">
+      and `status` = #{hzhIllnerssed.status,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.otherstatus != null">
+      and otherstatus = #{hzhIllnerssed.otherstatus,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.reason != null">
+      and reason = #{hzhIllnerssed.reason,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.otherreason != null">
+      and otherreason = #{hzhIllnerssed.otherreason,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.sick != null">
+      and sick = #{hzhIllnerssed.sick,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.rate != null">
+      and rate = #{hzhIllnerssed.rate,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.time != null">
+      and `time` = #{hzhIllnerssed.time,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.firstgo != null">
+      and firstgo = #{hzhIllnerssed.firstgo,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.otherfirstgo != null">
+      and otherfirstgo = #{hzhIllnerssed.otherfirstgo,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.old != null">
+      and `old` = #{hzhIllnerssed.old,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.oldreason != null">
+      and oldreason = #{hzhIllnerssed.oldreason,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.total != null">
+      and total = #{hzhIllnerssed.total,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.totalreason != null">
+      and totalreason = #{hzhIllnerssed.totalreason,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.follow != null">
+      and follow = #{hzhIllnerssed.follow,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.followreason != null">
+      and followreason = #{hzhIllnerssed.followreason,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.happen != null">
+      and happen = #{hzhIllnerssed.happen,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.happenreason != null">
+      and happenreason = #{hzhIllnerssed.happenreason,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.count != null">
+      and `count` = #{hzhIllnerssed.count,jdbcType=INTEGER}
+    </if>
+    <if test="hzhIllnerssed.childId != null">
+      and child_id = #{hzhIllnerssed.childId,jdbcType=INTEGER}
+    </if>
+    <if test="hzhIllnerssed.firstMonth != null">
+      and first_month = #{hzhIllnerssed.firstMonth,jdbcType=INTEGER}
+    </if>
+    <if test="hzhIllnerssed.hfirstgo != null">
+      and hfirstgo = #{hzhIllnerssed.hfirstgo,jdbcType=VARCHAR}
+    </if>
+    <if test="hzhIllnerssed.hotherfirstgo != null">
+      and hotherfirstgo = #{hzhIllnerssed.hotherfirstgo,jdbcType=VARCHAR}
+    </if>
+  </select>
 </mapper>
