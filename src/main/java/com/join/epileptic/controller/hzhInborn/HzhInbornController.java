@@ -17,7 +17,7 @@ import java.util.List;
  */
 @Controller
 @CrossOrigin
-@RequestMapping("/hzhInborn")
+@RequestMapping("/inborn")
 public class HzhInbornController {
     @Autowired
     HzhInbornService hzhInbornService;

@@ -1,6 +1,8 @@
 package com.join.epileptic.mapper.hzhIllnerssed;
 
+import com.join.epileptic.entity.hzhGeneral.HzhGeneral;
 import com.join.epileptic.entity.hzhIllnerssed.HzhIllnerssed;
+import com.join.epileptic.entity.hzhIllnerssed.HzhIllnerssedDto;
 import com.join.epileptic.entity.hzhIllnerssed.HzhIllnerssedExample;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -13,5 +15,5 @@ import java.util.List;
  */
 @Repository
 public interface HzhIllnerssedMapper extends MyBatisBaseDao<HzhIllnerssed, Integer, HzhIllnerssedExample> {
-    List<HzhIllnerssed> multiSelect(@Param("hzhIllnerssed") HzhIllnerssed hzhIllnerssed);
+    List<HzhIllnerssedDto> multiSelect(@Param("hzhIllnerssed") HzhIllnerssed hzhIllnerssed, @Param("hzhGeneral") HzhGeneral hzhGeneral);
 }

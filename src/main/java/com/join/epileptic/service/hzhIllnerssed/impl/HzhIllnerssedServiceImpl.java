@@ -1,6 +1,8 @@
 package com.join.epileptic.service.hzhIllnerssed.impl;
 
+import com.join.epileptic.entity.hzhGeneral.HzhGeneral;
 import com.join.epileptic.entity.hzhIllnerssed.HzhIllnerssed;
+import com.join.epileptic.entity.hzhIllnerssed.HzhIllnerssedDto;
 import com.join.epileptic.mapper.hzhIllnerssed.HzhIllnerssedMapper;
 import com.join.epileptic.service.hzhIllnerssed.HzhIllnerssedService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +40,7 @@ public class HzhIllnerssedServiceImpl implements HzhIllnerssedService {
     }
 
     @Override
-    public List<HzhIllnerssed> multiSelect(HzhIllnerssed hzhIllnerssed) {
-        return null;
+    public List<HzhIllnerssedDto> multiSelect(HzhIllnerssed hzhIllnerssed, HzhGeneral hzhGeneral) {
+        return hzhIllnerssedMapper.multiSelect(hzhIllnerssed, hzhGeneral);
     }
 }

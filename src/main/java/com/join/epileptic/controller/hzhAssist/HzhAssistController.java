@@ -17,7 +17,7 @@ import java.util.List;
  */
 @Controller
 @CrossOrigin
-@RequestMapping("/hzhAssist")
+@RequestMapping("/assist")
 public class HzhAssistController {
     @Autowired
     HzhAssistService hzhAssistService;

@@ -44,6 +44,7 @@
         <result column="lau" jdbcType="VARCHAR" property="lau"/>
         <result column="laus" jdbcType="VARCHAR" property="laus"/>
     </resultMap>
+
     <sql id="Example_Where_Clause">
         <where>
             <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -788,121 +789,121 @@
             and `name` like concat('%','${hzhGeneral.name}','%')
         </if>
         <if test="hzhGeneral.birthday != null">
-            and birthday = #{birthday,jdbcType=VARCHAR}
+            and birthday = #{hzhGeneral.birthday,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.age != null">
-            and age = #{hzhGeneral.age,jdbcType=INTEGER}
+            and age = #{hzhGeneral.hzhGeneral.age,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.province != null">
-            and province = #{province,jdbcType=VARCHAR}
+            and province = #{hzhGeneral.province,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.city != null">
-            and city = #{city,jdbcType=VARCHAR}
+            and city = #{hzhGeneral.city,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.town != null">
-            and town = #{town,jdbcType=VARCHAR}
+            and town = #{hzhGeneral.town,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.nation != null">
-            and nation = #{nation,jdbcType=VARCHAR}
+            and nation = #{hzhGeneral.nation,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.sfname != null">
-            and sfname = #{sfname,jdbcType=VARCHAR}
+            and sfname = #{hzhGeneral.sfname,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.relation != null">
-            and relation = #{relation,jdbcType=VARCHAR}
+            and relation = #{hzhGeneral.relation,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.address != null">
-            and address = #{address,jdbcType=VARCHAR}
+            and address = #{hzhGeneral.address,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.mobile != null">
-            and mobile = #{mobile,jdbcType=VARCHAR}
+            and mobile = #{hzhGeneral.mobile,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.sicknum != null">
-            and sicknum = #{sicknum,jdbcType=VARCHAR}
+            and sicknum = #{hzhGeneral.sicknum,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.doctor != null">
-            and doctor = #{doctor,jdbcType=VARCHAR}
+            and doctor = #{hzhGeneral.doctor,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.surveyTime != null">
-            and survey_time = #{surveyTime,jdbcType=VARCHAR}
+            and survey_time = #{hzhGeneral.surveyTime,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.livenum != null">
-            and livenum = #{livenum,jdbcType=VARCHAR}
+            and livenum = #{hzhGeneral.livenum,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.six != null">
-            and six = #{six,jdbcType=VARCHAR}
+            and six = #{hzhGeneral.six,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.citys != null">
-            and citys = #{citys,jdbcType=VARCHAR}
+            and citys = #{hzhGeneral.citys,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.xz != null">
-            and xz = #{xz,jdbcType=VARCHAR}
+            and xz = #{hzhGeneral.xz,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.nc != null">
-            and nc = #{nc,jdbcType=VARCHAR}
+            and nc = #{hzhGeneral.nc,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.ne != null">
-            and ne = #{ne,jdbcType=VARCHAR}
+            and ne = #{hzhGeneral.ne,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.mather != null">
-            and mather = #{mather,jdbcType=INTEGER}
+            and mather = #{hzhGeneral.mather,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.father != null">
-            and father = #{father,jdbcType=INTEGER}
+            and father = #{hzhGeneral.father,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.tais != null">
-            and tais = #{tais,jdbcType=INTEGER}
+            and tais = #{hzhGeneral.tais,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.chan != null">
-            and chan = #{chan,jdbcType=INTEGER}
+            and chan = #{hzhGeneral.chan,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.zhou != null">
-            and zhou = #{zhou,jdbcType=INTEGER}
+            and zhou = #{hzhGeneral.zhou,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.ctype != null">
-            and ctype = #{ctype,jdbcType=VARCHAR}
+            and ctype = #{hzhGeneral.ctype,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.kg != null">
-            and kg = #{kg,jdbcType=INTEGER}
+            and kg = #{hzhGeneral.kg,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.myqbs != null">
-            and myqbs = #{myqbs,jdbcType=INTEGER}
+            and myqbs = #{hzhGeneral.myqbs,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.myqbses != null">
-            and myqbses = #{myqbses,jdbcType=VARCHAR}
+            and myqbses = #{hzhGeneral.myqbses,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.shbs != null">
-            and shbs = #{shbs,jdbcType=VARCHAR}
+            and shbs = #{hzhGeneral.shbs,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.fych != null">
-            and fych = #{fych,jdbcType=INTEGER}
+            and fych = #{hzhGeneral.fych,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.action != null">
-            and `action` = #{action,jdbcType=VARCHAR}
+            and `action` = #{hzhGeneral.action,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.actions != null">
-            and actions = #{actions,jdbcType=VARCHAR}
+            and actions = #{hzhGeneral.actions,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.tai != null">
-            and tai = #{tai,jdbcType=INTEGER}
+            and tai = #{hzhGeneral.tai,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.fan != null">
-            and fan = #{fan,jdbcType=INTEGER}
+            and fan = #{hzhGeneral.fan,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.dz != null">
-            and dz = #{dz,jdbcType=INTEGER}
+            and dz = #{hzhGeneral.dz,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.pa != null">
-            and pa = #{pa,jdbcType=INTEGER}
+            and pa = #{hzhGeneral.pa,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.zou != null">
-            and zou = #{zou,jdbcType=INTEGER}
+            and zou = #{hzhGeneral.zou,jdbcType=INTEGER}
         </if>
         <if test="hzhGeneral.lau != null">
-            and lau = #{lau,jdbcType=VARCHAR}
+            and lau = #{hzhGeneral.lau,jdbcType=VARCHAR}
         </if>
         <if test="hzhGeneral.laus != null">
-            and laus = #{laus,jdbcType=VARCHAR}
+            and laus = #{hzhGeneral.laus,jdbcType=VARCHAR}
         </if>
     </select>
 </mapper>
