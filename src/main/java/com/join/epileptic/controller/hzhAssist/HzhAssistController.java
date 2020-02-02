@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
  * @Date:2019/11/28
  * @Description:
  */
-@Controller
+@RestController
 @CrossOrigin
 @RequestMapping("/assist")
 public class HzhAssistController {
@@ -27,9 +28,9 @@ public class HzhAssistController {
         return hzhAssistService.insert(hzhAssist);
     }
 
-    @RequestMapping("/listAll")
-    public List<HzhAssist> listAll(){
-        return hzhAssistService.multiSelect(new HzhAssist());
+    @RequestMapping("/selectHzhAssist")
+    public List<HzhAssist> listAll(HzhAssist hzhAssist){
+        return hzhAssistService.multiSelect(hzhAssist);
     }
 
     @RequestMapping("/updateById")
@@ -41,4 +42,5 @@ public class HzhAssistController {
     public int deleteById(@RequestBody int id){
         return hzhAssistService.deleteById(id);
     }
+
 }

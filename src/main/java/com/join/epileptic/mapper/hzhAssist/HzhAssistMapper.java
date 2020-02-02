@@ -13,5 +13,5 @@ import java.util.List;
  */
 @Repository
 public interface HzhAssistMapper extends MyBatisBaseDao<HzhAssist, Integer, HzhAssistExample> {
-    List<HzhAssist> multiSelect(@Param("hzhAssist") HzhAssist hzhAssist);
+    List<HzhAssist> multiSelect(@Param("hzh_assist") HzhAssist hzhAssist);
 }

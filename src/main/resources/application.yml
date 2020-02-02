@@ -7,9 +7,9 @@ spring:
     name: epileptic
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1/db_epileptic?useSSL=false&serverTimezone=UTC&charactorEncoding=UTF-8
+    url: jdbc:mysql://101.200.135.43/db_epileptic?useSSL=false&serverTimezone=UTC&charactorEncoding=UTF-8
     username: root
-    password: mysql
+    password: Join666!
   resources:
     static-locations: classpath:/static,classpath:/META_INFO,classpath:/templates,file:${headPicPath}
   mvc:
@@ -35,9 +35,9 @@ spring:
     static-path-pattern: /**
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.103.10.220/db_epileptic?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://101.200.135.43/db_epileptic?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
     username: root
-    password: Join666
+    password: Join666!
   http:
     encoding:
       charset: UTF-8

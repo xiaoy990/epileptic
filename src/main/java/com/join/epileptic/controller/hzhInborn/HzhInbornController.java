@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
  * @Date:2019/11/28
  * @Description:
  */
-@Controller
+@RestController
 @CrossOrigin
 @RequestMapping("/inborn")
 public class HzhInbornController {
