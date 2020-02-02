@@ -14,24 +14,24 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class EpilepticApplicationTests {
-
-    @Autowired
-    HzhGeneralMapper hzhGeneralMapper;
-    @Autowired
-    HzhDiagnoseMapper hzhDiagnoseMapper;
-    @Autowired
-    HzhTreatMapper hzhTreatMapper;
-    @Autowired
-    HzhFlupMapper hzhFlupMapper;
-
-    @Test
-    void contextLoads() {
-        HzhGeneral hzhGeneral = new HzhGeneral();
-        hzhGeneral.setName("礼拜1");
-        hzhGeneralMapper.multiSelect(hzhGeneral).forEach(System.out::println);
-        hzhDiagnoseMapper.multiSelect(new HzhDiagnose(),new HzhGeneral()).forEach(System.out::println);
-        hzhTreatMapper.multiSelect(new HzhTreat(),new HzhGeneral()).forEach(System.out::println);
-        hzhFlupMapper.multiSelect(new HzhFlup(),new HzhGeneral()).forEach(System.out::println);
-    }
+//
+//    @Autowired
+//    HzhGeneralMapper hzhGeneralMapper;
+//    @Autowired
+//    HzhDiagnoseMapper hzhDiagnoseMapper;
+//    @Autowired
+//    HzhTreatMapper hzhTreatMapper;
+//    @Autowired
+//    HzhFlupMapper hzhFlupMapper;
+//
+//    @Test
+//    void contextLoads() {
+//        HzhGeneral hzhGeneral = new HzhGeneral();
+//        hzhGeneral.setName("礼拜1");
+//        hzhGeneralMapper.multiSelect(hzhGeneral).forEach(System.out::println);
+//        hzhDiagnoseMapper.multiSelect(new HzhDiagnose(),new HzhGeneral()).forEach(System.out::println);
+//        hzhTreatMapper.multiSelect(new HzhTreat(),new HzhGeneral()).forEach(System.out::println);
+//        hzhFlupMapper.multiSelect(new HzhFlup(),new HzhGeneral()).forEach(System.out::println);
+//    }
 
 }
